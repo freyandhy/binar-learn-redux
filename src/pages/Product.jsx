@@ -3,7 +3,9 @@ import Counter from "../components/Counter";
 
 const Product = () => {
   const [order, setOrder] = useState(0);
-  const parentCallbackFunction = (dataFromChild) => setOrder(dataFromChild);
+
+  const counterPlus = () => setOrder(order + 1);
+  const counterMinus = () => setOrder(order - 1);
 
   return (
     <>
@@ -13,7 +15,11 @@ const Product = () => {
         <p>Order: {order}</p>
         <h3>Total: {order * 50000}</h3>
         <br />
-        <Counter parentCallback={parentCallbackFunction} />
+        <Counter
+          orderValue={order}
+          counterPlusFunction={counterPlus}
+          counterMinusFunction={counterMinus}
+        />
       </div>
     </>
   );
