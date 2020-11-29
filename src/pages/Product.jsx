@@ -11,9 +11,9 @@ const Product = () => {
         <p>Order: {order}</p>
         <h3>Total: {order * 50000}</h3>
         <br />
-        <button onClick={(e) => setOrder(order - 1)}>-</button>
+        <button onClick={() => setOrder(order - 1)}>-</button>
         <input type="text" value={order} readOnly />
-        <button onClick={(e) => setOrder(order + 1)}>+</button>
+        <button onClick={() => setOrder(order + 1)}>+</button>
       </div>
     </>
   );
