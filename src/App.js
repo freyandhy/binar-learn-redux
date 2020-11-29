@@ -1,9 +1,10 @@
 import React from "react";
+import Product from "./pages/Product";
 
 const App = () => {
   return (
     <>
-      <h1>Hai</h1>
+      <Product />
     </>
   );
 };
