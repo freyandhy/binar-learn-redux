@@ -1,7 +1,9 @@
 import React, { useState } from "react";
+import Counter from "../components/Counter";
 
 const Product = () => {
   const [order, setOrder] = useState(0);
+  const parentCallbackFunction = (dataFromChild) => setOrder(dataFromChild);
 
   return (
     <>
@@ -11,9 +13,7 @@ const Product = () => {
         <p>Order: {order}</p>
         <h3>Total: {order * 50000}</h3>
         <br />
-        <button onClick={(e) => setOrder(order - 1)}>-</button>
-        <input type="text" value={order} readOnly />
-        <button onClick={(e) => setOrder(order + 1)}>+</button>
+        <Counter parentCallback={parentCallbackFunction} />
       </div>
     </>
   );
