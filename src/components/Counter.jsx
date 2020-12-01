@@ -1,4 +1,5 @@
 import React from "react";
+import actionType from "../redux/actionType";
 import { connect } from "react-redux";
 
 const Counter = (props) => {
@@ -19,8 +20,8 @@ const stateToProps = (globalState) => {
 
 const dispatchToProps = (dispatch) => {
   return {
-    counterPlusFunction: () => dispatch({ type: "PLUS_ORDER" }),
-    counterMinusFunction: () => dispatch({ type: "MINUS_ORDER" }),
+    counterPlusFunction: () => dispatch({ type: actionType.PLUS_ORDER }),
+    counterMinusFunction: () => dispatch({ type: actionType.MINUS_ORDER }),
   };
 };
 
