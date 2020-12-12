@@ -9,7 +9,7 @@ const MovieSearchResult = ({ isLoading, movies }) => {
       {movies &&
         movies.map((movie) => {
           return (
-            <ul key={movie.imdbId}>
+            <ul key={movie.imdbID}>
               <li>{movie.Title}</li>
             </ul>
           );
