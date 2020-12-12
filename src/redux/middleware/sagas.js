@@ -24,21 +24,6 @@ function* searchMoviesWorker() {
   }
 }
 
-// const delay = (ms) => new Promise((res) => setTimeout(res, ms));
-
-// // Saga Watcher
-// export function* watchPlusOrder() {
-//   // yield take(types.PLUS_ORDER, handlePlusOrder);
-//   yield takeEvery("PLUS_ORDER_ASYNC", handlePlusOrder);
-// }
-
-// // Saga Worker
-// export function* handlePlusOrder() {
-//   yield delay(2000);
-//   yield console.log("Hey!");
-//   yield put({ type: types.PLUS_ORDER });
-// }
-
 // Combine all saga watcher
 function* rootSaga() {
   yield all([searchMoviesWatcher()]);
