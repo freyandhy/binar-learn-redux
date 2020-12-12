@@ -1,13 +1,13 @@
 import React from "react";
-import Product from "./pages/Product";
-import Checkout from "./pages/Checkout";
+import MovieSearch from "./pages/MovieSearch";
+import MovieSearchResult from "./pages/MovieSearchResult";
 
 const App = () => {
   return (
     <>
-      <Product />
+      <MovieSearch />
       <hr />
-      <Checkout />
+      <MovieSearchResult />
     </>
   );
 };
